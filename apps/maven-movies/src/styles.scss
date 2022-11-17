@@ -13,3 +13,19 @@ body {
 .pointer {
   cursor: pointer;
 }
+
+.mdc-card {
+  border-radius: 10px !important;
+}
+
+.languages {
+  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
+    .mdc-evolution-chip__text-label {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}

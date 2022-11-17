@@ -11,8 +11,8 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./pages/all-movies/all-movies.module').then(
-            (m) => m.AllMoviesModule
+          import('./pages/now-playing/now-playing-movies.module').then(
+            (m) => m.NowPlayingMoviesModule
           ),
       },
       {

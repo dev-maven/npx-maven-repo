@@ -4,17 +4,16 @@ import { Movie } from '../../core/models/movies';
 import { MoviesService } from '../../core/services/movies.service';
 
 @Component({
-  selector: 'nx-maven-repo-app-trending-movies',
-  templateUrl: './trending-movies.component.html',
-  styleUrls: ['./trending-movies.component.css'],
+  selector: 'nx-maven-repo-app-now-playing-movies',
+  templateUrl: './now-playing-movies.component.html',
+  styleUrls: ['./now-playing-movies.component.css'],
 })
-export class TrendingMoviesComponent implements OnInit {
+export class NowPlayingMoviesComponent implements OnInit {
   movies: Movie[] = [];
-
   constructor(private moviesService: MoviesService, private router: Router) {}
 
   ngOnInit() {
-    this.moviesService.getTrendingMovies().subscribe((res) => {
+    this.moviesService.getNowPlayingMovies().subscribe((res) => {
       this.movies = res.results;
     });
   }

@@ -7,9 +7,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/maven-movies",
         "index": "apps/maven-movies/src/index.html",
@@ -22,8 +20,8 @@
           "apps/maven-movies/src/assets"
         ],
         "styles": [
-          "@angular/material/prebuilt-themes/indigo-pink.css",
-          "apps/maven-movies/src/styles.scss"
+          "apps/maven-movies/src/styles.scss",
+          "node_modules/ngx-spinner/animations/ball-beat.css"
         ],
         "scripts": []
       },
@@ -89,9 +87,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/maven-movies/jest.config.ts",
         "passWithNoTests": true

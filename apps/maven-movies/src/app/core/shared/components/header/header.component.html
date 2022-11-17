@@ -12,7 +12,8 @@
       <li fxHide.xs><a class="pointer" routerLink="/top-rated">Top Rated</a></li>
       <li fxHide.xs><a class="pointer" routerLink="/trending">Trending</a></li>
       <li><button class="search-button" mat-icon-button (click)="onToggleSearch()">
-          <mat-icon>search</mat-icon>
+          <mat-icon *ngIf="!searchOpen">search</mat-icon>
+          <mat-icon *ngIf="searchOpen">close</mat-icon>
         </button></li>
     </ul>
   </div>

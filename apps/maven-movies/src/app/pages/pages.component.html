@@ -1,10 +1,26 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav role="navigation">
-    <app-sidenav-list (closeSidenav)="sidenav.close()"></app-sidenav-list>
+    <nx-maven-repo-app-sidenav-list (closeSidenav)="sidenav.close()"></nx-maven-repo-app-sidenav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <nx-maven-repo-app-header (sidenavToggle)="sidenav.toggle()" (searchToggle)="setSearchDisplay($event)"
+      [searchOpen]="showSearch">
+    </nx-maven-repo-app-header>
     <main>
+      <mat-form-field class="search-form" appearance="outline" *ngIf="showSearch">
+        <input type="text" matInput [matAutocomplete]="movieSelect" [formControl]="searchCtrl" />
+        <mat-icon matSuffix class="pointer" color="primary">search</mat-icon>
+        <mat-autocomplete autoActiveFirstOption #movieSelect="matAutocomplete"
+          (optionSelected)="onOptionSelected($event)">
+          <mat-option *ngFor="let movie of movies" [value]="movie.title">
+            <!-- <img class="table-pic" [src]="enrollee.picture" *ngIf="enrollee.picture; else defaultImg" /> -->
+            <!-- <ng-template #defaultImg>
+                            <img class="table-pic" src="assets/images/User.png" />
+                          </ng-template> -->
+            {{ movie.title }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>

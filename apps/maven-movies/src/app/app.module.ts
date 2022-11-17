@@ -7,6 +7,10 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app.routing';
 import { SharedModule } from './core/shared/shared.module';
 import { PagesComponent } from './pages/pages.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppInterceptor } from './core/utils/app-interceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, PagesComponent],
@@ -15,9 +19,15 @@ import { PagesComponent } from './pages/pages.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxSpinnerModule,
     CoreModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
