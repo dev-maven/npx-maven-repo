@@ -1,0 +1,48 @@
+.header-container {
+  background: url(/assets/cinema.jpg) bottom 10% center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  min-height: 250px;
+  color: #fff;
+
+  .caption-container {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    top: 0px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 25px;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: #ebebeb;
+      font-weight: 700;
+      font-size: 20px;
+
+      span {
+        color: #f1b80f;
+        font-size: 25px;
+      }
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(6, 12, 34, 0.8);
+  }
+}

@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-maven-repo/page-header": ["libs/page-header/src/index.ts"],
+      "@nx-maven-repo/third-party": ["libs/third-party/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
