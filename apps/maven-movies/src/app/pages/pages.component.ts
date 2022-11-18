@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { Movie } from '../core/models/movies';
+import { Movie } from '../core/models/interfaces';
 import { MoviesService } from '../core/services/movies.service';
 
 @Component({
@@ -15,6 +15,8 @@ export class PagesComponent implements OnInit {
   movies: Movie[] = [];
   showSearch = false;
   searchCtrl = new FormControl();
+  result: any;
+  baseUrl = 'https://www.themoviedb.org/t/p/w220_and_h330_face';
 
   constructor(private moviesService: MoviesService, private router: Router) {}
 
