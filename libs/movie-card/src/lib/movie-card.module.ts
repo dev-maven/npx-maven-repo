@@ -1,10 +1,10 @@
+import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@nx-maven-repo/third-party';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MatCardModule],
   declarations: [MovieCardComponent],
   exports: [MovieCardComponent],
 })
