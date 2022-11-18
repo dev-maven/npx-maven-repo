@@ -1,0 +1,38 @@
+<div *ngIf="selectedMovie" class="detail-hero" [ngStyle]="getBgImage(selectedMovie.backdrop_path)">
+  <div class="content-container">
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div fxFlex="100" fxFlex.gt-sm="60" fxFlex.gt-md="80">
+        <h1 class="title">{{selectedMovie.title}} ({{selectedMovie.release_date | date: 'yyyy'}})</h1>
+        <h3>Overview</h3>
+        <p class="overview">{{selectedMovie.overview}}</p>
+        <p><span class="runtime">{{selectedMovie.runtime}} minutes</span>
+          <span class="rating">
+            <mat-icon *ngFor="let star of stars; let i=index;" class="mat-icon-xs">{{star}}</mat-icon>
+
+          </span>
+        </p>
+        <p>
+          <mat-chip-set>
+            <mat-chip *ngFor="let genre of selectedMovie.genres" class="genre-chip">{{genre.name}}</mat-chip>
+          </mat-chip-set>
+        </p>
+
+
+        <h2>Languages:</h2>
+        <mat-chip-set class="languages">
+          <mat-chip class="language-chip" selected color="accent"
+            *ngFor="let language of selectedMovie.spoken_languages">
+            {{language.english_name}}
+          </mat-chip>
+        </mat-chip-set>
+
+
+      </div>
+      <div fxFlex="100" fxFlex.gt-xs="40" fxFlex.gt-md="20" class="poster-div" ngClass.gt-sm="pull-right"
+        ngClass.lt-md="pull-center" [ngStyle]="getBgImage(selectedMovie.poster_path)">
+
+      </div>
+
+    </div>
+  </div>
+</div>

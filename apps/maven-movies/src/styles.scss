@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html,
+body {
+  height: 100%;
+  background: #fafafa;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.mdc-card {
+  border-radius: 10px !important;
+}
+
+.languages {
+  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled)
+    .mdc-evolution-chip__text-label {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  width: 100%;
+}

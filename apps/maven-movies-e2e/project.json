@@ -19,12 +19,18 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/maven-movies-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/maven-movies-e2e/**/*.{js,ts}"
+        ]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["maven-movies"]
+  "implicitDependencies": [
+    "maven-movies"
+  ]
 }

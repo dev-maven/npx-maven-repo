@@ -1,0 +1,42 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+.name-text {
+  color: #ffe700;
+}
+
+.logo:hover,
+.logo:active {
+  span {
+    color: lightgray;
+  }
+  color: lightgray;
+}
+
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.logo-container {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.search-button {
+  padding: 5px;
+  height: unset;
+  --mat-mdc-button-persistent-ripple-color: transparent;
+  --mat-mdc-button-ripple-color: transparent;
+}
+
+.link-container {
+  padding-top: 8px;
+}

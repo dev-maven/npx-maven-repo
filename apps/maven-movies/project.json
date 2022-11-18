@@ -19,7 +19,10 @@
           "apps/maven-movies/src/favicon.ico",
           "apps/maven-movies/src/assets"
         ],
-        "styles": ["apps/maven-movies/src/styles.scss"],
+        "styles": [
+          "apps/maven-movies/src/styles.scss",
+          "node_modules/ngx-spinner/animations/ball-beat.css"
+        ],
         "scripts": []
       },
       "configurations": {

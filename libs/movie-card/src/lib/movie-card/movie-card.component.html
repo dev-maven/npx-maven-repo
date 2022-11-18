@@ -1,0 +1,9 @@
+<mat-card class="pointer poster-card" (click)="openDetail(movie.id, movie.title)">
+  <mat-card-content class="poster" [ngStyle]="getBgImage(movie?.poster_path)">
+
+  </mat-card-content>
+  <mat-card-footer class="footer-content">
+    <h1 class="title">{{movie?.title}}</h1>
+    <p class="date">{{movie?.release_date | date}}</p>
+  </mat-card-footer>
+</mat-card>
