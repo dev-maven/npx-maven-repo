@@ -33,3 +33,8 @@ body {
 .mat-mdc-option .mdc-list-item__primary-text {
   width: 100%;
 }
+
+.movie-wrapper {
+  height: calc(100vh - 350px);
+  overflow-y: auto;
+}

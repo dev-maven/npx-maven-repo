@@ -1,6 +1,6 @@
 <nx-maven-repo-page-header [category]="'Trending'"></nx-maven-repo-page-header>
 
-<div fxLayout="row wrap" fxLayoutGap="20px grid">
+<div fxLayout="row wrap" class="movie-wrapper" fxLayoutGap="20px grid">
   <div fxFlex="100" fxFlex.gt-md="25" fxFlex.md="33.3" fxFlex.sm="50" fxFlex.xs="100" *ngFor="let movie of movies">
     <nx-maven-repo-app-movie-card [movie]="movie" (cardClicked)="openDetail($event)" [imageFallback]="fallback">
     </nx-maven-repo-app-movie-card>
